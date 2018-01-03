@@ -1,5 +1,5 @@
 'use strict'
-const {ProductIterable, RangeIterable} = require('x-iterable')
+const {ProductIterable, RangeIterable, ConcatIterable} = require('x-iterable')
 const main = require('..')
 const {generate} = main
 
@@ -15,21 +15,25 @@ describe('generate(begin, step)', () => {
   )
 
   ProductIterable.pow(
-    RangeIterable
-      .range(-10, 10)
-      .map(x => x / 4),
+    new ConcatIterable(
+      [undefined],
+      RangeIterable
+        .range(-10, 10)
+        .map(x => x / 4)
+    ),
     2
   ).forEach(([begin, step]) => describe(`begin = ${begin}, step = ${step}`, () => {
     const [a, b, c, d] = generate(begin, step)
     const array = [a, b, c, d]
+    const [actualBegin = 0, actualStep = 1] = [begin, step]
 
     describe('types', () => typeCheckArray(array))
 
     test('values', () => expect(array).toEqual([
-      begin + step * 0,
-      begin + step * 1,
-      begin + step * 2,
-      begin + step * 3
+      actualBegin + actualStep * 0,
+      actualBegin + actualStep * 1,
+      actualBegin + actualStep * 2,
+      actualBegin + actualStep * 3
     ]))
   }))
 })
