@@ -1,4 +1,6 @@
 {
+  "name": "number-enum",
+  "description": "Create object of enum numbers",
   "version": "0.0.0",
   "main": "index.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
@@ -30,5 +32,22 @@
     "clean": "bash 'sh/clean.sh'",
     "fix": "bash 'sh/fix.sh'",
     "test": "jest --coverage"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/number-enum.git"
+  },
+  "keywords": [
+    "enum",
+    "object",
+    "number"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/number-enum/issues"
+  },
+  "homepage": "https://github.com/ksxnodemodules/number-enum#readme"
 }
