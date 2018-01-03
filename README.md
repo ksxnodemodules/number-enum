@@ -13,7 +13,7 @@
 
 ## Usage
 
-* See also: [File `spec/index.spec.js`](./spec/index.spec.js)
+* See also: [File `spec/index.spec.js`](https://goo.gl/3k6Hsh)
 
 ### Create Enum Object
 
