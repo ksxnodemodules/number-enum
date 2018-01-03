@@ -2,6 +2,9 @@
   "version": "0.0.0",
   "main": "index.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "dependencies": {
+    "parallel-iterable": "^3.0.1"
+  },
   "devDependencies": {
     "jest": "^22.0.4",
     "standard": "^10.0.3",
@@ -26,6 +29,6 @@
     "remake-package-json": "node sh/remake-package-json",
     "clean": "bash 'sh/clean.sh'",
     "fix": "bash 'sh/fix.sh'",
-    "test": "bash 'sh/test.sh'"
+    "test": "jest --coverage"
   }
 }
