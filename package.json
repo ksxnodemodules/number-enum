@@ -9,6 +9,12 @@
   "engines": {
     "node": ">= 9.0.0"
   },
+  "standard": {
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  },
   "scripts": {
     "sh": "sh",
     "bash": "bash",
