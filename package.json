@@ -4,7 +4,7 @@
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "devDependencies": {
     "jest": "^22.0.4",
-    "standard": "10.0.2"
+    "standard": "^10.0.3"
   },
   "engines": {
     "node": ">= 9.0.0"
