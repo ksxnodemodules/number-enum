@@ -1,7 +1,7 @@
 {
   "name": "number-enum",
   "description": "Create object of enum numbers",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "dependencies": {
