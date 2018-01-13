@@ -5,6 +5,8 @@ declare function GENERATE(current?: VAL, step?: VAL): Iterator<VAL>;
 declare function MAIN(names: KEY[], current?: VAL, step?: VAL): { [key: string] : VAL; };
 
 declare namespace MAIN {
+  export type Key = KEY;
+  export type Val = VAL;
   export const generate: typeof GENERATE;
   export const create: typeof MAIN;
 }
