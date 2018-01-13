@@ -24,3 +24,5 @@ jest.config*
 docs
 yarn.lock
 package-lock.json
+/.vscode
+/.atom
