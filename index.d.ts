@@ -1,12 +1,12 @@
-export type Key = string | Symbol;
-export type Val = number;
+type KEY = string;
+type VAL = number;
 
-declare function GENERATE(current: Val = 0, step: Val = 1): Iterator<Val>;
-declare function MAIN(names: Key[], current: Val = 0, step: Val = 1): { [key: Key] : Val; };
+declare function GENERATE(current?: VAL, step?: VAL): Iterator<VAL>;
+declare function MAIN(names: KEY[], current?: VAL, step?: VAL): { [key: string] : VAL; };
 
 declare namespace MAIN {
-  export const generate = GENERATE;
-  export const create = MAIN;
+  export const generate: typeof GENERATE;
+  export const create: typeof MAIN;
 }
 
 export = MAIN
