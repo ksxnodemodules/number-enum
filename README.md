@@ -8,7 +8,7 @@
 
 ### For Development
 
-* Node.js ≥ 9.0.0
+* Node.js ≥ 8.9.0
 * [Former Requirements](#for-use)
 
 ## Usage
