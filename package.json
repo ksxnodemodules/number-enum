@@ -8,6 +8,7 @@
     "parallel-iterable": "^3.0.1"
   },
   "devDependencies": {
+    "js-yaml": "^3.10.0",
     "jest": "^22.0.4",
     "standard": "^10.0.3",
     "x-iterable": "^6.0.1"
