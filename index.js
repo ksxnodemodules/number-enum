@@ -1,6 +1,6 @@
 'use strict'
 const ParallelIterable = require('parallel-iterable')
-const {freeze, assign} = Object
+const { freeze, assign } = Object
 
 function * generate (current = 0, step = 1) {
   yield current
@@ -10,7 +10,7 @@ function * generate (current = 0, step = 1) {
 function create (names = [], current = 0, step = 1) {
   return freeze(
     new ParallelIterable(ParallelIterable.END_OF_FIRST, names, generate(current, step))
-      .reduce((prev, [key, val]) => assign(prev, {[key]: val}), {})
+      .reduce((prev, [key, val]) => assign(prev, { [key]: val }), {})
   )
 }
 

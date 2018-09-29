@@ -1,5 +1,5 @@
 'use strict'
-const {create, generate} = require('..')
+const { create, generate } = require('..')
 
 describe('function create', () => {
   describe('special cases', () => {
@@ -9,10 +9,10 @@ describe('function create', () => {
   })
 
   describe('normal cases', () => {
-    test('(∅ ∅)', () => expect(create(['abc', 'def', 'ghi'])).toEqual({abc: 0, def: 1, ghi: 2}))
-    test('(4 ∅)', () => expect(create(['abc', 'def', 'ghi'], 4)).toEqual({abc: 4, def: 5, ghi: 6}))
-    test('(0 -1)', () => expect(create(['abc', 'def', 'ghi'], 0, -1)).toEqual({abc: 0, def: -1, ghi: -2}))
-    test('(0 .1)', () => expect(create(['abc', 'def', 'ghi'], 0, 0.1)).toEqual({abc: 0, def: 0.1, ghi: 0.2}))
+    test('(∅ ∅)', () => expect(create(['abc', 'def', 'ghi'])).toEqual({ abc: 0, def: 1, ghi: 2 }))
+    test('(4 ∅)', () => expect(create(['abc', 'def', 'ghi'], 4)).toEqual({ abc: 4, def: 5, ghi: 6 }))
+    test('(0 -1)', () => expect(create(['abc', 'def', 'ghi'], 0, -1)).toEqual({ abc: 0, def: -1, ghi: -2 }))
+    test('(0 .1)', () => expect(create(['abc', 'def', 'ghi'], 0, 0.1)).toEqual({ abc: 0, def: 0.1, ghi: 0.2 }))
   })
 })
 

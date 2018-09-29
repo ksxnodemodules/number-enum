@@ -1,7 +1,7 @@
 'use strict'
-const {ProductIterable, RangeIterable, ConcatIterable} = require('x-iterable')
+const { ProductIterable, RangeIterable, ConcatIterable } = require('x-iterable')
 const main = require('..')
-const {generate, create} = main
+const { generate, create } = main
 
 const represent = x => {
   if (!x) return String(x)

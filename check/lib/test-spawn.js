@@ -2,8 +2,8 @@
 
 function main ({
   path = require('path'),
-  childProcess: {spawnSync} = require('child_process'),
-  process: {env} = require('process'),
+  childProcess: { spawnSync } = require('child_process'),
+  process: { env } = require('process'),
   alwaysPrintStdIO = false,
   defaultExecutable = 'echo',
   envMiddleName = '?'
@@ -28,7 +28,7 @@ function main ({
       signal,
       error,
       status
-    } = spawnSync(executable, argv, {cwd: wdir, shell: true})
+    } = spawnSync(executable, argv, { cwd: wdir, shell: true })
 
     if (stdout === null) console.warn('respose.stdout is null')
     if (stderr === null) console.warn('respose.stderr is null')
