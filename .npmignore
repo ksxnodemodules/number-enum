@@ -26,3 +26,5 @@ yarn.lock
 package-lock.json
 /.vscode
 /.atom
+tsconfig.json
+tslint.json

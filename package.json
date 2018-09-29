@@ -12,7 +12,12 @@
     "js-yaml": "^3.10.0",
     "jest": "^23.6.0",
     "standard": "^12.0.1",
+    "typescript": "^3.0.3",
+    "static-type-assert": "^3.0.1",
     "x-iterable": "^6.0.1"
+  },
+  "peerDependencies": {
+    "typescript": "^3.0.3"
   },
   "engines": {
     "node": ">= 8.9.0"
