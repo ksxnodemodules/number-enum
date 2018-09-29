@@ -1,9 +1,11 @@
 'use strict'
 
 function main ({
+  description,
   path = require('path'),
   childProcess: { spawnSync } = require('child_process'),
   process: { env } = require('process'),
+  argvPrefix = [],
   alwaysPrintStdIO = false,
   defaultExecutable = 'echo',
   envMiddleName = '?'
@@ -16,7 +18,7 @@ function main ({
 
   const wdir = path.resolve(__dirname, '../..')
 
-  test('JavaScript Code Style: StandardJS', () => {
+  test(description, () => {
     if (skipSpawnTesting.toLowerCase() === 'true') return
 
     const argv = JSON.parse(spawnArguments)
@@ -28,7 +30,7 @@ function main ({
       signal,
       error,
       status
-    } = spawnSync(executable, argv, { cwd: wdir, shell: true })
+    } = spawnSync(executable, [...argvPrefix, ...argv], { cwd: wdir, shell: true })
 
     if (stdout === null) console.warn('respose.stdout is null')
     if (stderr === null) console.warn('respose.stderr is null')
