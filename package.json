@@ -3,6 +3,7 @@
   "description": "Create object of enum numbers",
   "version": "2.1.3",
   "main": "index.js",
+  "types": "index.d.ts",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "dependencies": {
     "parallel-iterable": "^3.0.1",
