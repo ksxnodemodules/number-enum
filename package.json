@@ -5,7 +5,8 @@
   "main": "index.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "dependencies": {
-    "parallel-iterable": "^3.0.1"
+    "parallel-iterable": "^3.0.1",
+    "iter-tools": "^6.1.4"
   },
   "devDependencies": {
     "js-yaml": "^3.10.0",

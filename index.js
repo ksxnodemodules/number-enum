@@ -1,5 +1,5 @@
 'use strict'
-const ParallelIterable = require('parallel-iterable')
+const { zip, reduce } = require('iter-tools')
 const { freeze, assign } = Object
 
 function * generate (current = 0, step = 1) {
@@ -8,10 +8,11 @@ function * generate (current = 0, step = 1) {
 }
 
 function create (names = [], current = 0, step = 1) {
-  return freeze(
-    new ParallelIterable(ParallelIterable.END_OF_FIRST, names, generate(current, step))
-      .reduce((prev, [key, val]) => assign(prev, { [key]: val }), {})
-  )
+  return freeze(reduce(
+    {},
+    (prev, [key, val]) => assign(prev, { [key]: val }),
+    zip(names, generate(current, step))
+  ))
 }
 
 module.exports = assign(create, {
