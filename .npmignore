@@ -28,3 +28,4 @@ package-lock.json
 /.atom
 tsconfig.json
 tslint.json
+shrinkwrap.yaml
