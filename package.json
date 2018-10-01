@@ -37,7 +37,8 @@
     "remake-package-json": "node sh/remake-package-json",
     "clean": "bash 'sh/clean.sh'",
     "fix": "bash 'sh/fix.sh'",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "prepublishOnly": "jest --coverage"
   },
   "directories": {
     "test": "test"
