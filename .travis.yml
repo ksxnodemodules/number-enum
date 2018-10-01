@@ -1,3 +1,9 @@
+branches:
+  except:
+    - draft
+    - tmp
+    - /.*\.(draft|tmp)$/
+    - /^(draft|tmp)\..*/
 
 language: node_js
 
@@ -6,27 +12,18 @@ node_js:
 
 cache:
   directories:
+    - $HOME/.pnpm-store
     - $HOME/.npm
     - $HOME/.nvm
     - $HOME/.node-gyp
     - $HOME/.node_libraries
-    - $HOME/node_modules
-    - node_modules
 
-before_script:
-  - chmod -R +x sh
+before_install:
+  - curl -L https://unpkg.com/@pnpm/self-installer | node
+  - pnpm --version
 
-before_deploy:
-  - source ./sh/deploy/before.sh
+install:
+  - pnpm install
 
-deploy:
-  provider: releases
-  api_key: $GITHUB_RELEASE_OAUTH
-  skip_cleanup: true
-  file_glob: true
-  file: $(./sh/deploy/file.sh)
-  on:
-    tags: true
-
-after_deploy:
-  - source ./sh/deploy/after.sh
+script:
+  - pnpm test
