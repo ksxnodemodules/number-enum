@@ -1,5 +1,5 @@
 'use strict'
-const { create, generate } = require('..')
+const { create, generate } = require('../..')
 
 describe('function create', () => {
   describe('special cases', () => {

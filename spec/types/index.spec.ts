@@ -1,5 +1,5 @@
 import assert from 'static-type-assert'
-import main, { create, generate } from '../index'
+import main, { create, generate } from '../..'
 
 assert<typeof create>(main)
 
