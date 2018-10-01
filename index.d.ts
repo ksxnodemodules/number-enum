@@ -1,18 +1,13 @@
-type KEY = string | number | symbol
-type VAL = number
-type SEQ<X> = Iterator<X> | Iterable<X>
+type Key = string | number | symbol
+type Value = number
+type Return<Keys extends Key> = { readonly [k in Keys]: number }
+type Generate = (current?: Value, step?: Value) => IterableIterator<Value>
+type Create = <Name extends Key>(names: Name[], current?: Value, step?: Value) => Return<Name>
 
-type RETURN<Keys extends KEY> = { readonly [k in Keys]: number }
-
-declare function GENERATE (current?: VAL, step?: VAL): IterableIterator<VAL>
-declare function MAIN<Name extends KEY> (names: Name[], current?: VAL, step?: VAL): RETURN<Name>
-
-declare namespace MAIN {
-  export type Key = KEY
-  export type Val = VAL
-  export type Seq<X> = SEQ<X>
-  export const generate: typeof GENERATE
-  export const create: typeof MAIN
+declare namespace AllFunctions {
+  export const generate: Generate
+  export const create: Create
 }
 
-export = MAIN
+declare const main: Create & typeof AllFunctions
+export = main

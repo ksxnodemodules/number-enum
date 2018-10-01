@@ -1,5 +1,10 @@
 import assert from 'static-type-assert'
-import { create, generate } from '../index'
+import main, { create, generate } from '../index'
+
+assert<typeof create>(main)
+
+const object = { create, generate }
+assert<typeof object>(main)
 
 assert<{
   readonly 0: number,
