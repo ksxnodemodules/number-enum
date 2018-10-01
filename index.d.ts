@@ -4,13 +4,6 @@ type SEQ<X> = Iterator<X> | Iterable<X>
 
 type RETURN<Keys extends KEY> = { readonly [k in Keys]: number }
 
-declare namespace RETURN {
-  interface DEFAULT {
-    [key: string]: VAL
-    [key: number]: VAL
-  }
-}
-
 declare function GENERATE (current?: VAL, step?: VAL): IterableIterator<VAL>
 declare function MAIN<Name extends KEY> (names: Name[], current?: VAL, step?: VAL): RETURN<Name>
 
