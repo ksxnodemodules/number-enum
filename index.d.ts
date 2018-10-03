@@ -1,4 +1,4 @@
-type Key = string | number | symbol
+type Key = string | symbol
 type Value = number
 type Return<Keys extends Key> = { readonly [k in Keys]: number }
 type Generate = (current?: Value, step?: Value) => IterableIterator<Value>
